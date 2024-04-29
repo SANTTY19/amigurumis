@@ -8,61 +8,17 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #e8cbe4;
 }
 
 header {
     background-image: url("../img/header.PNG");
-    background-size: cover; /* Ajusta la imagen para que cubra toda la altura del encabezado */
-    background-position: center center; /* Centra la imagen horizontal y verticalmente */
+    background-size: cover;
+    background-position: center center;
     color: #fff;
-    padding: 200px;
+    padding: 100px 20px;
     text-align: center;
-}
-
-/* Estilos del botón de hamburguesa */
-.menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 20px;
-    padding: 10px;
-    position: relative; /* Cambiado a posición relativa */
-    z-index: 999; /* Asegura que esté por encima de otros elementos */
-}
-
-/* Estilos del menú de navegación */
-.nav-menu {
-    display: none; /* Oculta el menú inicialmente */
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    position: absolute;
-    top: 100%; /* Muestra el menú debajo del botón de hamburguesa */
-    left: 0;
-    width: 100%;
-}
-
-.nav-menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.nav-menu ul li {
-    margin-bottom: 10px;
-}
-
-.nav-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 10px 0;
-}
-
-/* Mostrar el menú cuando se hace clic en el botón de hamburguesa */
-.menu-toggle.active + .nav-menu {
-    display: block;
+    position: relative;
 }
 
 footer {
@@ -74,6 +30,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    margin-top: 20px;
 }
 
 footer p {
@@ -81,41 +38,152 @@ footer p {
 }
 
 .productos {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Cambiar la disposición a horizontal */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
+    justify-content: space-between; /* Distribuir los elementos equitativamente en el contenedor */
+    padding: 20px; /* Espaciado interior */
+    margin-top: 50px; /* Aumento del margen superior */
+    margin-bottom: 100px; /* Dejar espacio para el footer */
 }
 
 .producto {
-    width: calc(33.33% - 20px);
-    margin: 10px;
+    width: calc(25% - 20px); /* Ancho fijo para cada producto, con espacio entre ellos */
+    margin-bottom: 20px; /* Espacio entre las filas de productos */
     background-color: #fff;
     padding: 20px;
     text-align: center;
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.producto:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último producto en cada fila */
 }
 
 .producto.visible {
     opacity: 1;
     transform: translateX(0);
 }
-
 .producto img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Agregar transición para suavizar el efecto */
+}
+
+.producto img:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+}
+
+
+.producto h2 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
+.producto p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
 button {
-    background-color: #333;
+    background-color: #ff4d4d;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 20px;
+    font-size: 1rem;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #ff6666;
+}
+
+
+.menu-icon {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f0aef3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+    padding: 10px 0;
+    margin-bottom: 800px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #bc1ce0;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px 0;
+        margin-bottom: 60px;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .productos {
+        margin-top: 90px;
+    }
+
+    .producto {
+        width: calc(50% - 20px);
+    }
 }
