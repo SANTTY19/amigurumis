@@ -1,56 +1,63 @@
+/* Estilos para la barra de navegación */
+header {
+    background-color: #333; /* Cambia el color de fondo según tu preferencia */
+    color: #fff; /* Cambia el color del texto según tu preferencia */
+    padding: 10px 0;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 90%; /* Ajusta el ancho del contenedor según tu diseño */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-.search-bar {
-    margin-top: 20px; /* Espacio superior */
+nav {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
-.search-bar input[type="text"] {
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 5px; /* Bordes redondeados */
-    width: 200px; /* Ancho del campo de entrada */
+.menu {
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
 }
 
-.search-bar button {
-    padding: 10px; /* Espaciado interno */
-    border: none; /* Sin borde */
-    background-color: #007bff; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar */
+.menu li {
+    display: inline-block; /* Muestra los elementos en línea */
+    margin-right: 20px; /* Espacio entre elementos */
 }
 
-.search-bar button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+.menu li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
 
-.catalogo {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
+.menu a {
+    color: #fff; /* Cambia el color del texto según tu preferencia */
+    text-decoration: none; /* Elimina la subraya en los enlaces */
+    font-size: 16px; /* Cambia el tamaño de fuente según tu preferencia */
 }
 
-.producto {
-    text-align: center;
+/* Estilos para la barra de búsqueda */
+.search-box {
+    margin-bottom: 20px; /* Espacio entre la barra de búsqueda y los productos */
 }
 
-.producto img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 5px;
+.search-box input[type="text"] {
+    padding: 8px; /* Ajusta el relleno del input según tu preferencia */
+    border: none; /* Elimina el borde del input */
+    border-radius: 5px; /* Ajusta el radio de borde según tu preferencia */
+    width: 200px; /* Ajusta el ancho del input según tu preferencia */
 }
 
-.producto h3 {
-    margin-top: 10px;
-    font-size: 18px;
+.search-box button {
+    padding: 8px; /* Ajusta el relleno del botón según tu preferencia */
+    border: none; /* Elimina el borde del botón */
+    background-color: #555; /* Cambia el color de fondo del botón según tu preferencia */
+    color: #fff; /* Cambia el color del texto del botón según tu preferencia */
+    border-radius: 5px; /* Ajusta el radio de borde según tu preferencia */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
-.producto p {
-    font-size: 16px;
-    color: #888;
+.search-box button:hover {
+    background-color: #777; /* Cambia el color de fondo del botón al pasar el cursor */
 }
