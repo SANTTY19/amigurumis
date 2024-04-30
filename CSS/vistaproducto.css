@@ -2,16 +2,16 @@
 .vista-producto {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 100px; /* Aumentar el margen superior */
-    margin-bottom: 50px;
-    padding: 0 20px; /* Agregar márgenes a los lados */
+    align-items: flex-start; /* Alinear los elementos arriba en dispositivos pequeños */
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0 20px;
 }
 
 .producto-imagen {
     flex: 1;
     margin-right: 30px;
-    margin-top: 30px; /* Reducir el margen superior o ajustarlo según sea necesario */
+    margin-top: 30px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -24,17 +24,17 @@
 }
 
 .producto-imagen:hover {
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el cursor */
+    transform: scale(1.05);
 }
 
 .producto-info {
     flex: 1;
-    background-color: white; /* Color de fondo más llamativo */
+    background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease forwards;
-    margin-top: 40px; /* Aumentar el margen superior */
+    margin-top: 40px;
 }
 
 @keyframes fadeIn {
@@ -51,26 +51,26 @@
 .producto-info h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    color: #4a4a4a; /* Color de texto más oscuro */
+    color: #4a4a4a;
 }
 
 .producto-info p {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #6e6e6e; /* Color de texto más oscuro */
+    color: #6e6e6e;
 }
 
 .producto-info strong {
-    color: #4a4a4a; /* Color de texto más oscuro */
+    color: #4a4a4a;
 }
 
 .producto-info button {
-    background-color: #ff6666; /* Color de botón más llamativo */
+    background-color: #ff6666;
     color: #fff;
     border: none;
     padding: 15px 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar transición */
+    transition: background-color 0.3s ease, transform 0.2s ease;
     border-radius: 30px;
     font-size: 1.4rem;
     display: block;
@@ -80,8 +80,8 @@
 }
 
 .producto-info button:hover {
-    background-color: #ff4d4d; /* Cambio de color al pasar el cursor */
-    transform: translateY(-3px); /* Elevar ligeramente el botón */
+    background-color: #ff4d4d;
+    transform: translateY(-3px);
 }
 
 /* Efecto de sombra al pasar el cursor sobre la información del producto */
@@ -91,27 +91,26 @@
 
 /* Área adicional para interacción */
 .interaccion-adicional {
-    background-color: #f9f9f9; /* Color de fondo */
-    padding: 50px 20px; /* Espacio alrededor del contenido */
+    background-color: #f9f9f9;
+    padding: 30px 20px; /* Ajustar el padding para dispositivos pequeños */
     text-align: center;
-    margin-bottom: 50px; /* Margen inferior */
+    margin-bottom: 30px;
 }
-
 
 .interaccion-adicional h3 {
     font-size: 2rem;
-    color: #333; /* Color de texto */
+    color: #333;
     margin-bottom: 20px;
 }
 
 .interaccion-adicional p {
     font-size: 1.2rem;
-    color: #666; /* Color de texto */
+    color: #666;
     margin-bottom: 30px;
 }
 
 .interaccion-adicional .btn {
-    background-color: #ff6666; /* Color de botón */
+    background-color: #ff6666;
     color: #fff;
     padding: 15px 30px;
     border: none;
@@ -122,5 +121,45 @@
 }
 
 .interaccion-adicional .btn:hover {
-    background-color: #ff4d4d; /* Cambio de color al pasar el cursor */
+    background-color: #ff4d4d;
+}
+
+/* Estilos para los colores */
+.color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.rosa {
+    background-color: #FFC0CB;
+}
+
+.blanco {
+    background-color: #FFFFFF;
+}
+
+.negro {
+    background-color: #000000;
+}
+
+/* Media query para ajustes específicos en dispositivos más pequeños */
+@media only screen and (max-width: 768px) {
+    .vista-producto {
+        flex-direction: column; /* Cambiar la dirección de flexión en dispositivos pequeños */
+        align-items: center;
+    }
+
+    .producto-imagen {
+        margin-right: 0; /* Eliminar el margen derecho en dispositivos pequeños */
+        margin-bottom: 20px; /* Añadir espacio entre la imagen y la información del producto */
+    }
+
+    .producto-info {
+        margin-top: 0; /* Eliminar el margen superior en dispositivos pequeños */
+        max-width: 400px; /* Limitar el ancho máximo de la información del producto */
+    }
 }
