@@ -94,8 +94,9 @@
     background-color: #f9f9f9;
     padding: 30px 20px; /* Ajustar el padding para dispositivos pequeños */
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px; /* Margen inferior de 30px */
 }
+
 
 .interaccion-adicional h3 {
     font-size: 2rem;
@@ -155,11 +156,20 @@
 
     .producto-imagen {
         margin-right: 0; /* Eliminar el margen derecho en dispositivos pequeños */
-        margin-bottom: 20px; /* Añadir espacio entre la imagen y la información del producto */
+        margin-bottom: 10px; /* Añadir espacio entre la imagen y la información del producto */
+        margin-top: 70px; /* Margen superior de 10px */
     }
+    
 
     .producto-info {
         margin-top: 0; /* Eliminar el margen superior en dispositivos pequeños */
         max-width: 400px; /* Limitar el ancho máximo de la información del producto */
+    }
+
+    .interaccion-adicional {
+        background-color: #f9f9f9;
+        padding: 30px 20px; /* Ajustar el padding para dispositivos pequeños */
+        text-align: center;
+        margin-bottom: 60px; /* Margen inferior de 30px */
     }
 }

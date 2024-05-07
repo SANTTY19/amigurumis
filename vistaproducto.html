@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/vistaproducto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos de la notificación */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,7 +33,7 @@
                     <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="#catalogo"><i class="fas fa-book"></i> Catálogo</a></li>
                     <li><a href="#contacto"><i class="fas fa-envelope"></i> Contáctanos</a></li>
-                    <li><a href="#carrito"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+                    <li id="cart"><a href="#carrito"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +56,7 @@
                     <span class="color negro"></span>
                 </p>
                 <p><i class="far fa-clock"></i> <strong>Duración de entrega:</strong> 5-7 días hábiles.</p>
-                <button><i class="fas fa-shopping-cart"></i> Ordenar Ahora</button>
+                <button onclick="addToCart()"><i class="fas fa-shopping-cart"></i> Ordenar Ahora</button>
             </div>
             
         </section>
@@ -63,6 +77,34 @@
         <p>&copy; 2024 Tienda de Amigurumis. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Elemento de audio para el sonido de notificación -->
+    <audio id="notification-sound" src="./sounds/notificacion.mp3" preload="auto"></audio>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function addToCart() {
+            // Reproducir el sonido de notificación
+            document.getElementById('notification-sound').play();
+
+            // Creamos la notificación
+            var notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = 'El producto se ha añadido al carrito';
+
+            // Insertamos la notificación en el DOM
+            document.body.appendChild(notification);
+
+            // Mostramos la notificación
+            $(notification).fadeIn();
+
+            // Ocultamos la notificación después de 3 segundos
+            setTimeout(function() {
+                $(notification).fadeOut(function() {
+                    // Eliminamos la notificación del DOM después de ocultarla
+                    $(notification).remove();
+                });
+            }, 3000);
+        }
+    </script>
 </body>
 </html>

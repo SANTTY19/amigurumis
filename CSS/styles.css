@@ -205,3 +205,54 @@ button:hover {
     background-color: #ff6666;
     transform: scale(1.05);
 }
+
+
+aside {
+    width: 30%; /* Ancho del aside */
+    background-size: cover;
+    padding: 20px;
+    position: fixed; /* Fijar el aside en la pantalla */
+    top: 250px; /* Ajusta la posición superior según sea necesario */
+    left: 68%;
+    height: auto; /* Altura automática */
+    margin-top: 20px; /* Agrega un margen superior */
+    margin-bottom: 60px; /* Agrega un margen inferior para el footer */
+    border: none; /* Elimina los bordes */
+}
+
+/* Estilos para los productos */
+aside .productos {
+    max-width: 80%; /* Ancho máximo del contenedor de productos */
+    margin: 0 auto; /* Centrar el contenedor de productos */
+    height: 100%; /* Altura del contenido igual al 100% del aside */
+}
+
+/* Estilos para los productos */
+aside .producto {
+    display: none;
+    width: 100%; /* Ancho completo del producto */
+    margin-bottom: 20px; /* Espacio entre productos */
+    opacity: 0; /* Inicialmente ocultos */
+    transform: scale(0.9) rotateY(90deg); /* Escala y rotación inicial */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
+    animation: fadeInRotate 0.5s ease forwards; /* Animación de entrada */
+}
+
+@keyframes fadeInRotate {
+    from {
+        opacity: 0;
+        transform: scale(0.9) rotateY(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+aside .producto.visible {
+    display: block;
+    opacity: 1; /* Mostrar con opacidad completa */
+    transform: scale(1) rotateY(0deg); /* Restaurar escala y rotación */
+}
+
+
