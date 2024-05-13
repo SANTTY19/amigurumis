@@ -212,8 +212,8 @@ aside {
     background-size: cover;
     padding: 20px;
     position: fixed; /* Fijar el aside en la pantalla */
-    top: 250px; /* Ajusta la posición superior según sea necesario */
-    left: 68%;
+    top: 31.5%; /* Ajusta la posición superior según sea necesario */
+    left: 75%;
     height: auto; /* Altura automática */
     margin-top: 20px; /* Agrega un margen superior */
     margin-bottom: 60px; /* Agrega un margen inferior para el footer */
@@ -254,5 +254,4 @@ aside .producto.visible {
     opacity: 1; /* Mostrar con opacidad completa */
     transform: scale(1) rotateY(0deg); /* Restaurar escala y rotación */
 }
-
 
