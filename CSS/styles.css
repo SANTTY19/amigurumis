@@ -8,48 +8,108 @@
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e8cbe4;
+    background-color: #b088ab; /* Un tono suave de lavanda */
 }
 
+/* Estilos para el encabezado */
 header {
     background-image: url("../img/header.PNG");
     background-size: cover;
     background-position: center center;
-    color: #fff;
-    padding: 100px 20px;
+    color: #fff; /* Texto blanco */
+    padding: 150px 20px; /* Aumentar el padding superior e inferior */
     text-align: center;
     position: relative;
 }
 
-footer {
-    background-color: #fff;
-    color: black;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-top: 20px;
+/* Estilos para el título */
+header h1 {
+    font-size: 4.5rem; /* Aumentar el tamaño del título */
+    margin-bottom: 30px; /* Aumentar el espacio inferior */
 }
 
-footer p {
-    margin: 0;
+/* Estilos para el párrafo */
+header p {
+    font-size: 1.4rem; /* Aumentar el tamaño del párrafo */
+    margin-bottom: 40px; /* Aumentar el espacio inferior */
 }
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #ffeafd; /* Color de fondo */
+    color: #333; /* Color del texto */
+    padding: 50px 0; /* Espaciado interior */
+}
+
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinear verticalmente al centro */
+}
+
+.footer-info > * {
+    margin: 0 20px; /* Espacio entre elementos */
+}
+
+.footer-logo img {
+    display: block; /* Asegurar que la imagen se ajuste correctamente */
+    width: 150px;
+    height: auto;
+}
+
+.footer-contact,
+.footer-social {
+    text-align: center; /* Centrar el contenido */
+}
+
+.footer-contact p,
+.footer-social p {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+
+.social-icons a:hover {
+    color: #bc1ce0; /* Cambio de color al pasar el cursor */
+}
+
+.footer-bottom {
+    text-align: center; /* Alineación del texto al centro */
+}
+
+.footer-bottom p {
+    font-size: 14px; /* Tamaño del texto */
+    margin: 0; /* Eliminar margen */
+}
+
 
 .productos {
-    display: flex; /* Cambiar la disposición a horizontal */
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en filas */
-    justify-content: space-between; /* Distribuir los elementos equitativamente en el contenedor */
-    padding: 20px; /* Espaciado interior */
-    margin-top: 50px; /* Aumento del margen superior */
-    margin-bottom: 100px; /* Dejar espacio para el footer */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .producto {
-    width: calc(25% - 20px); /* Ancho fijo para cada producto, con espacio entre ellos */
-    margin-bottom: 20px; /* Espacio entre las filas de productos */
-    background-color: #fff;
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff; /* Fondo blanco */
     padding: 20px;
     text-align: center;
     opacity: 0;
@@ -60,13 +120,14 @@ footer p {
 }
 
 .producto:last-child {
-    margin-right: 0; /* Eliminar el margen derecho del último producto en cada fila */
+    margin-right: 0;
 }
 
 .producto.visible {
     opacity: 1;
     transform: translateX(0);
 }
+
 .producto img {
     width: 100%;
     height: 200px;
@@ -74,13 +135,12 @@ footer p {
     object-position: center;
     margin-bottom: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease; /* Agregar transición para suavizar el efecto */
+    transition: transform 0.3s ease;
 }
 
 .producto img:hover {
-    transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+    transform: scale(1.1);
 }
-
 
 .producto h2 {
     font-size: 1.2rem;
@@ -92,22 +152,65 @@ footer p {
     margin-bottom: 15px;
 }
 
-button {
-    background-color: #ff4d4d;
+.boton-comprar {
+    background-color: #ff4d4d; /* Rojo */
     color: #fff;
     border: none;
     padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     border-radius: 20px;
     font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+.boton-comprar:hover {
+    background-color: #ff6666;
+    transform: scale(1.05);
+}
+.hero {
+    background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-amigurumi-hd-8k-imagen-fotografica-stock_871881-7140.jpg");
+    background-size: cover;
+    padding: 150px 0; /* Aumenta el padding para hacer el componente más grande */
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 1000px; /* Aumenta el ancho del contenedor */
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Aumenta el tamaño del título */
+    margin-bottom: 40px; /* Mayor espacio inferior para separar el título del párrafo */
+    color: #fff; /* Texto blanco */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Aumenta el tamaño del párrafo */
+    margin-bottom: 50px; /* Mayor espacio inferior para separar los párrafos */
+    color: rgba(255, 255, 255, 0.9); /* Texto blanco con menor opacidad */
+}
+
+.hero .boton {
+    background-color: #ff4d4d; /* Rojo */
+    color: #fff;
+    border: none;
+    padding: 18px 36px; /* Aumenta el padding para que el botón sea aún más grande */
+    border-radius: 30px; /* Mayor border-radius para botón redondeado */
+    font-size: 1.2rem; /* Aumenta el tamaño del texto del botón */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+}
+
+.hero .boton:hover {
     background-color: #ff6666;
 }
 
 
+/* Estilos para el menú */
 .menu-icon {
     display: none;
 }
@@ -119,7 +222,7 @@ button:hover {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #ffeafd; /* Color principal */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     z-index: 999;
@@ -146,9 +249,10 @@ button:hover {
 }
 
 .menu a:hover {
-    color: #bc1ce0;
+    color: #bc1ce0; /* Violeta */
 }
 
+/* Media queries */
 @media only screen and (max-width: 768px) {
     header {
         padding: 50px 20px;
@@ -163,7 +267,7 @@ button:hover {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: #fff; /* Fondo blanco */
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         padding: 10px 0;
@@ -188,70 +292,223 @@ button:hover {
     }
 }
 
+/* Estilos para la sección de Productos Destacados */
+.productos-destacados h2 {
+    font-size: 35px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación al centro */
+    margin-bottom: 30px; /* Espacio inferior */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    position: relative; /* Posición relativa para agregar pseudo-elemento */
+    top: 250px; /* Mover hacia abajo 30px */
+}
+
+.productos-destacados h2::after {
+    content: ''; /* Contenido del pseudo-elemento */
+    display: block; /* Mostrar como bloque */
+    width: 400px; /* Ancho del pseudo-elemento */
+    height: 4px; /* Altura del pseudo-elemento */
+    background-color: white; /* Color del pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -10px; /* Alinear el pseudo-elemento debajo del título */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar centrado horizontal */
+}
+
+
+.productos-destacados h3 {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color azul */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    margin-bottom: 10px; /* Espacio inferior */
+    position: relative; /* Posición relativa para pseudo-elemento */
+}
+
+.productos-destacados h3::after {
+    content: ''; /* Contenido del pseudo-elemento */
+    display: block; /* Mostrar como bloque */
+    width: 100%; /* Ancho del pseudo-elemento */
+    height: 1px; /* Altura del pseudo-elemento */
+    background-color: #333; /* Color azul */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -4px; /* Alinear el pseudo-elemento debajo del título */
+    left: 0; /* Alinear al lado izquierdo */
+}
+
+
+
+.container-p {
+    display: flex; /* Mostrar los elementos en línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear verticalmente al inicio */
+    flex-wrap: wrap; /* Permitir envolver en varias filas */
+    gap: 20px; /* Espacio entre elementos */
+}
+.productos-destacados {
+    background-image: url("https://royumi.com/wp-content/uploads/2024/02/Amigurumi_01.jpg");
+    background-size: cover;
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del contenido al centro */
+}
+.productos {
+    display: flex; /* Mostrar productos en fila */
+    justify-content: center; /* Centrar productos horizontalmente */
+    flex-wrap: wrap; /* Permitir que los productos se envuelvan en varias filas */
+}
+
+.producto {
+    width: calc(50% - 20px); /* Ancho del 50% del contenedor, menos el espacio entre ellos */
+    max-width: 300px; /* Ancho máximo para limitar el tamaño */
+    margin-bottom: 20px; /* Espacio inferior entre productos */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Color de fondo */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center; /* Alineación del contenido al centro */
+}
+
+
+.producto img {
+    width: 100%; /* Imagen al 100% del ancho del contenedor */
+    height: auto; /* Altura automática */
+    border-radius: 8px; /* Borde redondeado */
+}
+
+.producto h3 {
+    margin-top: 20px; /* Espacio superior */
+    font-size: 1.2rem; /* Tamaño del título */
+}
+
+.producto p {
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
 .boton-comprar {
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 1rem;
-    text-decoration: none; /* Quitar la decoración de subrayado */
-    display: inline-block; /* Para que se comporte como un elemento de bloque */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Convertir en elemento de bloque */
+    background-color: #ff4d4d; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Borde redondeado */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
 }
 
 .boton-comprar:hover {
-    background-color: #ff6666;
-    transform: scale(1.05);
+    background-color: #ff6666; /* Color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Escala al pasar el ratón */
 }
 
-
-aside {
-    width: 30%; /* Ancho del aside */
+/*Estilos testimonios*/
+/* Estilos para el contenedor de testimonios */
+.testimonios {
+    background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-amigurumi-hd-8k-imagen-fotografica-stock_871881-7139.jpg");
     background-size: cover;
-    padding: 20px;
-    position: fixed; /* Fijar el aside en la pantalla */
-    top: 31.5%; /* Ajusta la posición superior según sea necesario */
-    left: 75%;
-    height: auto; /* Altura automática */
-    margin-top: 20px; /* Agrega un margen superior */
-    margin-bottom: 60px; /* Agrega un margen inferior para el footer */
-    border: none; /* Elimina los bordes */
+    padding: 150px 0; /* Aumentar el espaciado interno */
+    text-align: center; /* Alineación del contenido al centro */
 }
 
-/* Estilos para los productos */
-aside .productos {
-    max-width: 80%; /* Ancho máximo del contenedor de productos */
-    margin: 0 auto; /* Centrar el contenedor de productos */
-    height: 100%; /* Altura del contenido igual al 100% del aside */
+/* Estilos para el texto dentro del contenedor de testimonios */
+.testimonios p {
+    font-size: 1.2rem; /* Aumentar el tamaño del texto */
+    margin-bottom: 30px; /* Aumentar el espacio inferior */
 }
 
-/* Estilos para los productos */
-aside .producto {
-    display: none;
-    width: 100%; /* Ancho completo del producto */
-    margin-bottom: 20px; /* Espacio entre productos */
-    opacity: 0; /* Inicialmente ocultos */
-    transform: scale(0.9) rotateY(90deg); /* Escala y rotación inicial */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición suave */
-    animation: fadeInRotate 0.5s ease forwards; /* Animación de entrada */
+
+.titulo-testimonios {
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+    color: #333333; /* Color del texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
 }
 
-@keyframes fadeInRotate {
-    from {
-        opacity: 0;
-        transform: scale(0.9) rotateY(90deg);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) rotateY(0deg);
-    }
+.container-test {
+    display: flex; /* Mostrar los elementos en línea */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+    flex-wrap: wrap; /* Permitir envolver en varias filas */
+    gap: 20px; /* Espacio entre testimonios */
 }
 
-aside .producto.visible {
-    display: block;
-    opacity: 1; /* Mostrar con opacidad completa */
-    transform: scale(1) rotateY(0deg); /* Restaurar escala y rotación */
+.testimonio {
+    flex: 1; /* Que cada testimonio ocupe el mismo ancho */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffeafd; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transición suave */
+    max-width: 300px; /* Ancho máximo del testimonio */
 }
 
+.testimonio:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba al pasar el cursor */
+}
+
+.avatar {
+    width: 60px; /* Ancho del avatar */
+    height: 60px; /* Altura del avatar */
+    border-radius: 50%; /* Borde redondeado para hacer un círculo */
+    overflow: hidden; /* Ocultar contenido que excede los límites del avatar */
+    margin: 0 auto 20px; /* Margen inferior y centrado horizontalmente */
+}
+
+.avatar img {
+    width: 100%; /* Ancho completo de la imagen del avatar */
+    height: 100%; /* Altura completa de la imagen del avatar */
+    object-fit: cover; /* Ajustar la imagen dentro del contenedor del avatar */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.avatar:hover img {
+    transform: scale(1.1); /* Aumentar el tamaño de la imagen del avatar al pasar el cursor */
+}
+
+.texto-testimonio {
+    padding: 0 10px; /* Espaciado interno para el texto del testimonio */
+}
+
+.testimonio p {
+    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.6; /* Altura de línea */
+    color: #555555; /* Color de texto */
+}
+
+.testimonios h2 {
+    font-size: 25px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación al centro */
+    margin-bottom: 30px; /* Espacio inferior */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    position: relative; /* Posición relativa para agregar pseudo-elemento */
+}
+
+.testimonios h2::after {
+    content: ''; /* Contenido del pseudo-elemento */
+    display: block; /* Mostrar como bloque */
+    width: 300px; /* Ancho del pseudo-elemento */
+    height: 4px; /* Altura del pseudo-elemento */
+    background-color: white; /* Color del pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -10px; /* Alinear el pseudo-elemento debajo del título */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Ajustar centrado horizontal */
+}
+
+
+.testimonio p:last-child {
+    margin-bottom: 0; /* Eliminar margen inferior del último párrafo */
+}
+
+.nombre {
+    font-weight: bold; /* Negrita para el nombre del cliente */
+    color: #333333; /* Color de texto */
+    font-style: italic; /* Estilo de fuente cursiva */
+}
